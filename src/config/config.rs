@@ -29,10 +29,12 @@ impl Default for ApplicationConfig {
         let result: ApplicationConfig =
             serde_yaml::from_str(yml_data).expect("load config file fail");
         if result.debug {
-            println!("[abs_admin] load config:{:?}", result);
-            println!("[abs_admin] ///////////////////// Start On Debug Mode ////////////////////////////");
+            println!("[mall_rs] load config:{:?}", result);
+            println!(
+                "[mall_rs] ///////////////////// Start On Debug Mode ////////////////////////////"
+            );
         } else {
-            println!("[abs_admin] ///////////////////// Start On Release Mode ////////////////////////////");
+            println!("[mall_rs] ///////////////////// Start On Release Mode ////////////////////////////");
         }
         result
     }

@@ -9,3 +9,13 @@ pub struct ServiceContext {
     pub config: ApplicationConfig,
     pub rb: Rbatis,
 }
+
+impl Default for ServiceContext {
+    fn default() -> Self {
+        let config = ApplicationConfig::default();
+        ServiceContext {
+            rb: crate::domain::init_rbatis(&config),
+            config,
+        }
+    }
+}
