@@ -3,7 +3,7 @@
 debug: true
 #名称
 #Name
-server_name: "abs_admin"
+server_name: "mall_rs"
 #server 地址
 #Server address
 server_url: "0.0.0.0:8000"
@@ -54,13 +54,13 @@ log_level: "info"
 log_chan_len: 100000
 #JwtToken秘钥
 #JwtToken secret
-jwt_secret: "abs_admin"
+jwt_secret: "mall_rs"
 #短信通道缓存（系统先把数据放入队列sms:send:，第三方短信sdk或程序需要从队列获取并发送，获得回执存入sms:resp:*）,格式为sms:send:手机号和sms:resp:手机号
 #SMS channel cache (the system first puts the data into the queue sms:send:, and the third-party SMS SDK or program needs to get and send it from the queue, and store the receipt in sms:resp:*), in the format of sms:send: phone number and sms:resp: phone number
 sms_cache_send_key_prefix: "sms:send:"
 #登陆失败拒绝策略，重试次数限制(0次无限制)
 #Login failure rejection policy, retry limit (0 times for no limit)
-login_fail_retry: 3
+login_fail_retry: 5
 #登陆失败重试次数限制超过后提示的等待时间（秒）
 #Waiting time for login failure retry limit exceeded (in seconds)
 login_fail_retry_wait_sec: 30
